@@ -1,6 +1,5 @@
 import { Pressable, StyleProp, Text, View, ViewStyle } from 'react-native'
 import { colors, globalStyles } from '../../../config/theme/theme';
-import { preset } from '../../../../jest.config';
 
 interface Props {
   text: string;
@@ -15,9 +14,10 @@ export const Button = ( { text, styles, onPress }: Props ) => {
       style = { ({ pressed }) => ([
         globalStyles.btnPrimary,
         {
-          opacity: pressed ? 0 : 1,
-          backgroundColor: colors.primary
-        }
+          opacity: pressed ? 0.5 : 1,
+          backgroundColor: colors.primary,
+        },
+        styles
       ])}
     >
       <Text style={[

@@ -85,17 +85,7 @@ export const HomeScreen = () => {
               />
             ))
           }
-          <View style={{marginTop: 30}} />
-          {
-            menuItems.map( (item, index) => (
-              <MenuItem
-                key={item.component}
-                {...item}
-                isFirst={index === 0}
-                isLast={index === menuItems.length - 1}
-              />
-            ))
-          }
+
           <View style={{marginTop: 30}} />
           {
             uiMenuItems.map( (item, index) => (
@@ -107,6 +97,20 @@ export const HomeScreen = () => {
               />
             ))
           }
+
+          <View style={{marginTop: 30}} />
+          {
+            menuItems.map( (item, index) => (
+              <MenuItem
+                key={item.component}
+                {...item}
+                isFirst={index === 0}
+                isLast={index === menuItems.length - 1}
+              />
+            ))
+          }
+
+          <View style={{marginTop: 30}} />
         </ScrollView>
       </View>
     </View>
