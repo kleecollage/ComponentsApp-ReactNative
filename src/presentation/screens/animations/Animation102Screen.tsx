@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
-import {Animated, PanResponder, StyleSheet, View} from 'react-native';
+import {Animated, PanResponder, StyleSheet} from 'react-native';
+import { CustomView } from '../../components/ui/CustomView';
 
 export const Animation102Screen = () => {
   const pan = useRef(new Animated.ValueXY()).current;
@@ -24,12 +25,12 @@ export const Animation102Screen = () => {
   });
 
   return (
-    <View style={styles.container}>
+    <CustomView style={styles.container}>
       <Animated.View
         {...panResponder.panHandlers}
         style={[pan.getLayout(), styles.box]}
       />
-    </View>
+    </CustomView>
   );
 }
 

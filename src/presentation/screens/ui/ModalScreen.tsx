@@ -21,15 +21,15 @@ export const ModalScreen = () => {
         visible={isVisible}
         animationType='slide'
       >
-        <View style={{
+        <CustomView style={{
           flex: 1,
           backgroundColor: 'rgba(0,0,0,0.1)'
         }}>
-          <View style={{paddingHorizontal: 10}}>
+          <CustomView style={{paddingHorizontal: 10}}>
             <Title text='Modal content' safe />
-          </View>
+          </CustomView>
           
-          <View style={{flex: 1}} />
+          <CustomView style={{flex: 1}} />
 
           <Button
             text='Cerrar Modal'
@@ -39,7 +39,8 @@ export const ModalScreen = () => {
               borderRadius: 0,
             }}
           />
-        </View>
+        </CustomView>
+
       </Modal>
 
 

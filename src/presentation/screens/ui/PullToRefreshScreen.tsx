@@ -1,9 +1,10 @@
 import { ScrollView } from 'react-native-gesture-handler'
 import { RefreshControl } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { colors, globalStyles } from '../../../config/theme/theme'
 import { Title } from '../../components/ui/Title'
+import { ThemeContext } from '../../context/ThemeContext'
 
 export const PullToRefreshScreen = () => {
 

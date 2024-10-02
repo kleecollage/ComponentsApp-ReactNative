@@ -3,9 +3,10 @@ import { Title } from '../../components/ui/Title'
 import { Card } from '../../components/ui/Card'
 import { SectionList, Text, useWindowDimensions } from 'react-native';
 import { Subtitle } from '../../components/ui/Subtitle';
-import { colors } from '../../../config/theme/theme';
 import { Separator } from '../../components/ui/Separator';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useContext } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
 
 interface Houses {
   title: string;
@@ -93,6 +94,7 @@ export const CustomSectionListScreen = () => {
 
   const { height } = useWindowDimensions();
   const { top } = useSafeAreaInsets();
+  const { colors } = useContext(ThemeContext);
 
   return (
     <CustomView margin>
@@ -102,7 +104,7 @@ export const CustomSectionListScreen = () => {
         <SectionList
           sections={ houses }
           keyExtractor={ (item) => item }
-          renderItem={({item}) => <Text style={{marginVertical: 2}}>{item}</Text> }
+          renderItem={({item}) => <Text style={{marginVertical: 2, color: colors.text}}>{item}</Text> }
           
           renderSectionHeader={ ({section}) => <Subtitle text={section.title} backgroundColor={colors.cardBackground} /> }
           stickySectionHeadersEnabled
