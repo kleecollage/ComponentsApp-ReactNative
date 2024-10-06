@@ -1,4 +1,5 @@
-package com.componentsapp
+package com.kleecollage.rncomponentsapp
+
 import android.os.Bundle;
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
